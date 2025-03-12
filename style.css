@@ -11,6 +11,12 @@ body {
   background-color: linear-gradient(45deg, rgba(255, 255, 255, 0.5), red);
 }
 
+@media screen and (max-width: 400px) {
+  .wrapper {
+    width: 500px;
+  }
+}
+
 .wrapper {
   max-width: 100%;
   height: auto;
