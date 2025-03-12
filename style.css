@@ -1,0 +1,157 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("images/image-asset.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: linear-gradient(45deg, rgba(255, 255, 255, 0.5), red);
+}
+
+.wrapper {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.box-login {
+  width: 400px;
+  height: auto;
+  margin: 150px 100px 100px 560px;
+  background: transparent;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  box-shadow: 0 0 10px black;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+form h1 {
+  background: linear-gradient(45deg, red, green, blue, yellow);
+  color: transparent;
+  background-clip: text;
+  background-size: 300px 300px;
+  animation: color 3s ease-in-out infinite;
+  margin-top: 30px;
+  font-weight: 600;
+}
+
+@keyframes color {
+  0% {
+    background-position: 0%;
+  }
+
+  50% {
+    background-position: 100%;
+  }
+
+  100% {
+    background-position: 0%;
+  }
+}
+
+form .box-username,
+form .box-password {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+form .box-username input,
+form .box-password input {
+  width: 250px;
+  height: 30px;
+  margin: 10px;
+  color: white;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+}
+
+form input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid white;
+}
+
+form .box-username .item,
+form .box-password .item1 {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #fff;
+  font-size: 20px;
+}
+
+form label.password,
+form label.name {
+  position: absolute;
+  top: 5px;
+  right: 185px;
+  color: #fff;
+  font-weight: 600px;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+form input:focus ~ label,
+form input:valid ~ label {
+  transform: translateY(-100%);
+}
+
+form input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid white;
+}
+
+button {
+  background-color: transparent;
+  width: 150px;
+  padding: 7px;
+  color: #fff;
+  margin: 40px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 2px solid white;
+  cursor: pointer;
+  box-shadow: -5px -5px 5px white;
+}
+
+button:focus {
+  box-shadow: 5px 5px 5px white;
+}
+
+label.checkbox {
+  color: #fff;
+  position: absolute;
+  top: 360px;
+  right: 45%;
+  display: flex;
+  font-size: 15px;
+  align-items: center;
+  font-weight: 500;
+  gap: 3px;
+}
+
+form .resigner {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 50px;
+}
+form .resigner a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 900px;
+}
