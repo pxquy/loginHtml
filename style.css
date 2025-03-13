@@ -40,6 +40,23 @@ form {
   justify-content: center;
   gap: 20px;
 }
+.box {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  text-align: center;
+  border: 10px solid white;
+  border-top: 10px solid green;
+  border-bottom: 10px solid red;
+  border-radius: 50%;
+  animation: spin 1.5s infinite ease;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 form h1 {
   background: linear-gradient(45deg, red, green, blue, yellow);
@@ -49,6 +66,8 @@ form h1 {
   animation: color 3s ease-in-out infinite;
   margin-top: 30px;
   font-weight: 600;
+  position: absolute;
+  top: 160px;
 }
 
 @keyframes color {
@@ -70,6 +89,7 @@ form .box-password {
   position: relative;
   display: flex;
   flex-direction: column;
+  font-size: 18px;
 }
 
 form .box-username input,
@@ -140,7 +160,7 @@ button:focus {
 label.checkbox {
   color: #fff;
   position: absolute;
-  top: 360px;
+  top: 410px;
   right: 45%;
   display: flex;
   font-size: 15px;
