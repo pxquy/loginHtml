@@ -9,7 +9,7 @@
   <body>
     <div class="wrapper">
       <div class="box-login">
-        <form action="">
+        <div class="box-form">
           <div class="box"></div>
           <h1>LOGIN</h1>
           <div class="box-username">
@@ -22,16 +22,20 @@
             <input type="password" name="password" id="password" required />
             <label for="" class="password">Password</label>
           </div>
-          <label for="" class="checkbox"
-            ><input type="checkbox" />check username and password</label
-          >
-          <button>LOGIN</button>
+          <div class="checkbox">
+            <label for="" class="checkbox"
+              ><input type="checkbox" id="input" />check username and
+              password</label
+            >
+          </div>
+          <button type="submit" id="submit" onclick="checkForm()">LOGIN</button>
           <label for="" class="resigner"
             >Don't have a account <a href="">resigner</a></label
           >
-        </form>
+        </div>
       </div>
     </div>
+    <script src="style.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"

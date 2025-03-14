@@ -8,57 +8,57 @@ body {
   background-image: url("images/image-asset.jpeg");
   background-repeat: no-repeat;
   background-size: 100%;
+  position: relative;
   background-color: linear-gradient(45deg, rgba(255, 255, 255, 0.5), red);
 }
 
-@media screen and (max-width: 400px) {
-  .wrapper {
-    width: 500px;
-  }
-}
-
 .wrapper {
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  display: flex;
+  align-items: center;
   margin: 0 auto;
 }
 
 .box-login {
   width: 400px;
   height: auto;
-  margin: 150px 100px 100px 560px;
+  margin: 100px 0px 0px 550px;
   background: transparent;
   border-radius: 10px;
   border: 2px solid #fff;
   box-shadow: 0 0 10px black;
 }
 
-form {
+.box-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 20px;
 }
+
 .box {
   position: relative;
   width: 120px;
   height: 120px;
   text-align: center;
-  border: 10px solid white;
-  border-top: 10px solid green;
-  border-bottom: 10px solid red;
+  border-top: 1px solid green;
+  border-right: 1px solid yellow;
+  border-left: 1px solid blue;
+  border-bottom: 1px solid red;
   border-radius: 50%;
-  animation: spin 1.5s infinite ease;
+  animation: spin 0.5s infinite ease;
+  top: 10px;
 }
 
 @keyframes spin {
   to {
-    transform: rotate(360deg);
+    transform: rotate(380deg);
   }
 }
 
-form h1 {
+.box-form h1 {
   background: linear-gradient(45deg, red, green, blue, yellow);
   color: transparent;
   background-clip: text;
@@ -67,7 +67,7 @@ form h1 {
   margin-top: 30px;
   font-weight: 600;
   position: absolute;
-  top: 160px;
+  top: 120px;
 }
 
 @keyframes color {
@@ -84,16 +84,16 @@ form h1 {
   }
 }
 
-form .box-username,
-form .box-password {
+.box-form .box-username,
+.box-form .box-password {
   position: relative;
   display: flex;
   flex-direction: column;
   font-size: 18px;
 }
 
-form .box-username input,
-form .box-password input {
+.box-form .box-username input,
+.box-form .box-password input {
   width: 250px;
   height: 30px;
   margin: 10px;
@@ -103,14 +103,14 @@ form .box-password input {
   border-bottom: 2px solid white;
 }
 
-form input:focus {
+.box-form input:focus {
   border: none;
   outline: none;
   border-bottom: 2px solid white;
 }
 
-form .box-username .item,
-form .box-password .item1 {
+.box-form .box-username .item,
+.box-form .box-password .item1 {
   position: absolute;
   top: 5px;
   right: 5px;
@@ -118,8 +118,8 @@ form .box-password .item1 {
   font-size: 20px;
 }
 
-form label.password,
-form label.name {
+.box-form label.password,
+.box-form label.name {
   position: absolute;
   top: 5px;
   right: 185px;
@@ -129,12 +129,12 @@ form label.name {
   transition: all 0.3s ease-in-out;
 }
 
-form input:focus ~ label,
-form input:valid ~ label {
+.box-form input:focus ~ label,
+.box-form input:valid ~ label {
   transform: translateY(-100%);
 }
 
-form input:focus {
+.box-form input:focus {
   border: none;
   outline: none;
   border-bottom: 2px solid white;
@@ -150,18 +150,26 @@ button {
   background-color: rgba(255, 255, 255, 0.3);
   border: 2px solid white;
   cursor: pointer;
-  box-shadow: -5px -5px 5px white;
+  transform: scale(1.1);
+  box-shadow: 3px 7px 5px black;
 }
 
 button:focus {
-  box-shadow: 5px 5px 5px white;
+  transform: scale(1);
+  box-shadow: 5px 5px 5px transparent;
+  background-color: green;
+}
+
+.checkbox {
+  position: relative;
+  width: 100%;
+  height: auto;
 }
 
 label.checkbox {
   color: #fff;
   position: absolute;
-  top: 410px;
-  right: 45%;
+  left: 90px;
   display: flex;
   font-size: 15px;
   align-items: center;
@@ -169,15 +177,102 @@ label.checkbox {
   gap: 3px;
 }
 
-form .resigner {
+input[type="checkbox"] {
+  cursor: pointer;
+  background-color: transparent;
+}
+input[type="checkbox"]:checked {
+  cursor: pointer;
+  background-color: green;
+}
+
+.box-form .resigner {
   width: 100%;
   text-align: center;
   color: #fff;
   margin-bottom: 50px;
 }
-form .resigner a {
+.box-form .resigner a {
   text-decoration: none;
   font-size: 20px;
   color: #fff;
   font-weight: 900px;
+}
+
+@media only screen and (max-width: 600px) and (min-height: 500px) {
+  body {
+    width: 100%;
+    height: 100vh;
+    background-size: 200% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .box-login {
+    width: 250px;
+    height: auto;
+    margin: auto;
+    background: transparent;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px black;
+  }
+
+  .box {
+    width: 50px;
+    height: 50px;
+  }
+
+  .box-form {
+    gap: 10px;
+    position: relative;
+  }
+
+  .box-form h1 {
+    top: 1px;
+    background: linear-gradient(45deg, white, aqua, black);
+    background-clip: text;
+    font-size: 13px;
+  }
+
+  .box-form .box-username,
+  .box-form .box-password {
+    font-size: 13px;
+  }
+
+  .box-form .box-username input,
+  .box-form .box-password input {
+    width: 200px;
+  }
+
+  .box-form label.password,
+  .box-form label.name {
+    top: 15px;
+    left: 10px;
+  }
+
+  .box-form .box-username .item,
+  .box-form .box-password .item1 {
+    font-size: 13px;
+    top: 20px;
+    right: 10px;
+  }
+
+  .checkbox label {
+    font-size: 12px;
+    left: 20px;
+  }
+
+  button {
+    width: 80px;
+    padding: 2px;
+    font-size: 13px;
+    margin: 20px 0 10px 0;
+  }
+
+  .box-form .resigner {
+    margin: 0px 0 5px 0;
+    font-size: 13px;
+  }
 }
