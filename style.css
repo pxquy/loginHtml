@@ -43,18 +43,19 @@ body {
   width: 120px;
   height: 120px;
   text-align: center;
-  border-top: 1px solid green;
   border-right: 1px solid yellow;
   border-left: 1px solid blue;
+  /* border: 1px solid white; */
   border-bottom: 1px solid red;
+  border-top: 1px solid green;
   border-radius: 50%;
-  animation: spin 0.5s infinite ease;
+  animation: spin 0.5s infinite linear;
   top: 10px;
 }
 
 @keyframes spin {
   to {
-    transform: rotate(380deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -220,6 +221,7 @@ input[type="checkbox"]:checked {
   }
 
   .box {
+    margin-top: 2px;
     width: 50px;
     height: 50px;
   }
@@ -230,7 +232,7 @@ input[type="checkbox"]:checked {
   }
 
   .box-form h1 {
-    top: 1px;
+    top: 0.5px;
     background: linear-gradient(45deg, white, aqua, black);
     background-clip: text;
     font-size: 13px;
