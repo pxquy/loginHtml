@@ -184,7 +184,7 @@ input[type="checkbox"] {
 }
 input[type="checkbox"]:checked {
   cursor: pointer;
-  background-color: green;
+  accent-color: green;
 }
 
 .box-form .resigner {
