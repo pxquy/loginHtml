@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* TẠO GRID */
+.grid {
+  width: 100%;
+  display: block;
+  padding: 0;
+}
+
+.grid.wite {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .wite {
+    width: 980px;
+  }
+}
+
+@media (min-width: 740px) and (max-width: 1024px) {
+  .wite {
+    width: 664px;
+  }
+}
+
+/* END GRID */
+.container {
+  background: orange;
+  text-align: center;
+}
+h1 {
+  color: white;
+}
