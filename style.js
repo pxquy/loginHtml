@@ -16,7 +16,7 @@ function checkForm() {
   if (password.length < length2) {
     document.getElementById("mes2").innerText = "sai mật khẩu";
   }
-  if (name === username && password === password1) {
+  if (name == username && password == password1) {
     window.location.href = "product.html";
   }
   if (name != username || password != password1) {
